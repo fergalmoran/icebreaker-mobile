@@ -1,0 +1,20 @@
+[
+    {
+        "userName": "fergal.moran@gmail.com",
+        "displayName": "Fergal Moran",
+        "avatarImage": "https://api.adorable.io/avatars/64/fergalm",
+        "tagLine": "Scientist, pragmatist, generous lover, all round nice guy"
+    },
+    {
+        "userName": "mar.spud@gmail.com",
+        "displayName": "Maurice Murphy",
+        "avatarImage": "https://api.adorable.io/avatars/64/marspud",
+        "tagLine": "I like spuds"
+    },
+    {
+        "userName": "donagh.murphy@gmail.com",
+        "displayName": "Donagh Murphy",
+        "avatarImage": "https://api.adorable.io/avatars/64/donaghmurphy",
+        "tagLine": "Wanna see my robots?"
+    }
+]
