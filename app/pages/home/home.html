@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ice Breaker
+        </ion-title>
+        <ion-buttons end>
+            <button (click)="logoutClicked()">
+            <ion-icon name="contact"></ion-icon>
+            {{buttonTitle}}
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="home">
+    <ion-item>
+        <ion-row>
+            <ion-col width-100>
+                <button (click)="addNewItemClicked()">Add Item</button>
+            </ion-col>
+        </ion-row>
+    </ion-item>
+    <ion-card *ngFor="let item of textItems | async">
+        <ion-card-header>
+            {{item.title}}
+        </ion-card-header>
+        <ion-card-content>
+            {{item.description}} - {{ item.timestamp | MomentDate:"LLL"}}
+        </ion-card-content>
+        <ion-col offset-80>
+            <button (click)="deleteItemClicked(item)">Delete</button>
+        </ion-col>
+    </ion-card>
+    <ion-card *ngFor="let user of usersWithMessages | async">
+        <ion-card-header>
+            {{user.displayName}}
+        </ion-card-header>
+        <ion-card-content>
+            {{ (user.messages | async) | json}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
