@@ -5,3 +5,5 @@ www/build/
 platforms/
 plugins/
 .DS_Store
+
+certs/

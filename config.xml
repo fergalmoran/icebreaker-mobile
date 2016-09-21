@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.fbtest484605" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>fbtest</name>
-  <description>An Ionic Framework and Cordova project.</description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="com.podnoms.icebreaker" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>IceBreaker</name>
+  <description>How much does a polar bear weigh?</description>
+  <author email="Ferg@lMoran.me" href="http://podnoms.com/">Pod::Noms</author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
@@ -32,4 +32,12 @@
   <plugin name="cordova-plugin-splashscreen" spec="~3.2.1"/>
   <plugin name="cordova-plugin-statusbar" spec="~2.1.2"/>
   <plugin name="ionic-plugin-keyboard" spec="~2.0.1"/>
+  <plugin name="cordova-plugin-facebook4" spec="~1.7.1">
+      <variable name="APP_ID" value="1768059153478688" />
+      <variable name="APP_NAME" value="Ice Breaker" />
+  </plugin>  
+  <plugin name="cordova-plugin-googleplus" spec="~4.0.8">
+      <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps._google_client_app_id_" />
+  </plugin>  
+  <plugin name="cordova-plugin-inappbrowser" spec="~1.4.0" />
 </widget>

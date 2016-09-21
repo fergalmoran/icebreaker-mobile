@@ -1,10 +1,12 @@
 //import 'es6-shim';
-import {Component} from '@angular/core';
-import {ionicBootstrap, Platform} from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {Nav, ionicBootstrap, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {HomePage} from './pages/home/home';
+import {NearbyPage} from './pages/nearby/nearby';
 import {TabsPage} from './pages/tabs/tabs';
-
+import {OnInit} from '@angular/core';
+import {AuthProvider} from './providers/auth/auth'
+import {LoginPage} from './pages/login/login'
 
 import {
     FIREBASE_PROVIDERS, defaultFirebase,
@@ -15,6 +17,7 @@ import {
 @Component({
     template: '<ion-nav [root]="rootPage"></ion-nav>',
     providers: [
+        AuthProvider,
         FIREBASE_PROVIDERS,
         // Initialize Firebase app  
         defaultFirebase({
@@ -31,15 +34,31 @@ import {
         })
     ]
 })
-export class MyApp {
+export class MyApp implements OnInit {
+    @ViewChild(Nav) nav: Nav;
     private rootPage: any;
+    isAppInitialized: boolean;
 
-    constructor(platform: Platform) {
-        this.rootPage = TabsPage;
-        platform.ready().then(() => {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
+    constructor(private platform: Platform, protected auth: AuthProvider) {
+        this.isAppInitialized = false;
+    }
+
+    ngOnInit() {
+        this.initializeApp();
+    }
+
+    initializeApp() {
+        this.platform.ready().then(() => {
             StatusBar.styleDefault();
+
+            this.auth.getUserData().subscribe(data => {
+                if (!this.isAppInitialized) {
+                    this.nav.setRoot(TabsPage);
+                    this.isAppInitialized = true;
+                }
+            }, err => {
+                this.nav.setRoot(LoginPage);
+            });
         });
     }
 }

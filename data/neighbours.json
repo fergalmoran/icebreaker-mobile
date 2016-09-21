@@ -2,19 +2,25 @@
     {
         "userName": "fergal.moran@gmail.com",
         "displayName": "Fergal Moran",
-        "avatarImage": "https://api.adorable.io/avatars/64/fergalm",
-        "tagLine": "Scientist, pragmatist, generous lover, all round nice guy"
+        "avatarImage": "https://podnomscdn.blob.core.windows.net/icebreaker/fergal.jpg",
+        "tagLine": "Scientist, pragmatist, generous lover, all round nice guy",
+        "averageRating": "4.5",
+        "followerCount": "253"
     },
     {
         "userName": "mar.spud@gmail.com",
         "displayName": "Maurice Murphy",
-        "avatarImage": "https://api.adorable.io/avatars/64/marspud",
-        "tagLine": "I like spuds"
+        "avatarImage": "https://podnomscdn.blob.core.windows.net/icebreaker/maurice.jpg",
+        "tagLine": "I like spuds",
+        "averageRating": "4.5",
+        "followerCount": "182"
     },
     {
         "userName": "donagh.murphy@gmail.com",
         "displayName": "Donagh Murphy",
-        "avatarImage": "https://api.adorable.io/avatars/64/donaghmurphy",
-        "tagLine": "Wanna see my robots?"
+        "avatarImage": "https://podnomscdn.blob.core.windows.net/icebreaker/donagh.jpg",
+        "tagLine": "Wanna see my robots?",
+        "averageRating": "4.5",
+        "followerCount": "193"
     }
 ]
